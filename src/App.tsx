@@ -1,6 +1,7 @@
 import './App.css';
-import Filter from './components/filter';
+import CityFilter from './components/city-filter';
 import Header from './components/header';
+import SalesOverview from './components/sales-overview';
 
 function App() {
   return (
@@ -9,7 +10,9 @@ function App() {
         <Header />
 
         <div className="app-container">
-          <Filter />
+          <CityFilter />
+
+          <SalesOverview />
         </div>
       </>
     </div>

@@ -1,4 +1,4 @@
-.filter-container {
+.city-filter-container {
   margin-top: 10px;
   height: 130px;
   display: flex;
@@ -9,41 +9,42 @@
   /* border: 1px solid red; */
 }
 
-.filter-select-container {
-  width: 270px;
+.city-filter-select-container {
+  /* width: 270px; */
+  width: 100%;
 }
 
-.filter-select__control {
+.city-filter-select__control {
   height: 50px;
   border: 1px solid var(--grey-color) !important;
   border-radius: 4px !important;
 }
 
-.filter-select__indicator-separator {
+.city-filter-select__indicator-separator {
   display: none;
 }
 
-.filter-select__placeholder {
+.city-filter-select__placeholder {
   color: var(--grey-color) !important;
 }
 
-.filter-select__single-value {
+.city-filter-select__single-value {
   color: var(--grey-color) !important;
 }
 
-.filter-select__clear-indicator {
+.city-filter-select__clear-indicator {
   color: var(--grey-color) !important;
 }
 
-.filter-select__dropdown-indicator {
+.city-filter-select__dropdown-indicator {
   color: var(--grey-color) !important;
 }
 
-.filter-select__menu {
+.city-filter-select__menu {
   color: var(--grey-color) !important;
   background-color: var(--primary-color) !important;
 }
 
-.filter-select__option--is-focused {
+.city-filter-select__option--is-focused {
   color: var(--blue-color) !important;
 }

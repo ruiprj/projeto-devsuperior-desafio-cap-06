@@ -1,0 +1,17 @@
+.sales-overview-card {
+  margin-top: 10px;
+  padding: 40px 15px;
+}
+
+.sales-by-date-quantity {
+  display: block;
+  font-size: 36px;
+  line-height: 41px;
+}
+
+.sales-by-date-quantity-label {
+  display: block;
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--grey-color);
+}

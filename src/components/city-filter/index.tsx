@@ -1,7 +1,7 @@
 import Select from 'react-select';
 import './styles.css';
 
-function Filter() {
+function CityFilter() {
   const options = [
     { value: 'chocolate', label: 'Chocolate' },
     { value: 'strawberry', label: 'Strawberry' },
@@ -9,14 +9,14 @@ function Filter() {
   ];
 
   return (
-    <div className="filter-container  base-card">
-      <form className="filter-form">
-        <div className="filter-select-container">
+    <div className="city-filter-container  base-card">
+      <form className="city-filter-form">
+        <div className="city-filter-select-container">
           <Select
             options={options}
             isClearable
             placeholder="Selecione..."
-            classNamePrefix="filter-select"
+            classNamePrefix="city-filter-select"
           />
         </div>
       </form>
@@ -24,4 +24,4 @@ function Filter() {
   );
 }
 
-export default Filter;
+export default CityFilter;

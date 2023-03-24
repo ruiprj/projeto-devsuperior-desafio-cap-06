@@ -1,0 +1,12 @@
+.sales-piechart-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+
+  /* border: 1px solid red; */
+}
+
+.apexcharts-legend.apexcharts-align-center {
+  flex-direction: column;
+  align-items: center;
+}
