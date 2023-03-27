@@ -13,7 +13,7 @@ function SalesOverview() {
       <PieChartGraphic
         name=""
         labels={['Feminino', 'Masculino', 'Outro']}
-        series={[1000, 1000, 2000]}
+        series={[1000.32, 1000.95, 2000]}
       />
     </div>
   );

@@ -9,7 +9,7 @@ function CityFilter() {
   ];
 
   return (
-    <div className="city-filter-container  base-card">
+    <div className="city-filter-card  base-card">
       <form className="city-filter-form">
         <div className="city-filter-select-container">
           <Select

@@ -1,8 +1,9 @@
-.city-filter-container {
+.city-filter-card {
   margin-top: 10px;
   height: 130px;
   display: flex;
-  align-items: center;
+  justify-content: center; /* alinhar horizontal */
+  align-items: center; /* alinhar vertical */
   padding-left: 15px;
   padding-right: 15px;
 
@@ -10,8 +11,7 @@
 }
 
 .city-filter-select-container {
-  /* width: 270px; */
-  width: 100%;
+  width: 250px;
 }
 
 .city-filter-select__control {
@@ -48,3 +48,16 @@
 .city-filter-select__option--is-focused {
   color: var(--blue-color) !important;
 }
+
+@media (min-width: 576px) {
+  .city-filter-card {
+    margin-top: 40px;
+    justify-content: flex-start; /* alinhar horizontal */
+    padding: 40px;
+  }
+
+  .city-filter-select-container {
+    width: 270px;
+  }
+}
+

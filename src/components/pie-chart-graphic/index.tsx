@@ -14,7 +14,7 @@ function PieChartGraphic({ labels, name, series }: Props) {
       <ReactApexChart
         options={buildPieChartConfig(labels, name)}
         type="donut"
-        width="300"
+        width="200"
         height="300"
         series={series}
       />
