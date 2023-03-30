@@ -1,5 +1,5 @@
 import { ApexOptions } from 'apexcharts';
-import { formatFloat } from '../../utils/formatters';
+import { formatFloat, formatFloatPercent } from '../../utils/formatters';
 
 export const buildPieChartConfig = (labels: string[] = [], name: string) => {
   return {
@@ -34,9 +34,27 @@ export const buildPieChartConfig = (labels: string[] = [], name: string) => {
     dataLabels: {
       enabled: true,
       formatter: function (val) {
-        return formatFloat(Number(val)) + '%';
+        return formatFloatPercent(Number(val)) + '%';
       },
-      dropShadow: {}
+      dropShadow: {},
+      style: {
+        fontSize: '10px',
+        fontFamily: 'Ubuntu, sans-serif'
+        // fontWeight: 'bold',
+        // colors: undefined
+      }
+    },
+    tooltip: {
+      enabled: true,
+      x: {
+        format: 'dd MMM',
+        formatter: undefined
+      },
+      y: {
+        formatter: (value) => {
+          return formatFloat(value);
+        }
+      }
     },
     plotOptions: {
       pie: {
