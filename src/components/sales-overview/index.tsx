@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { SalesSummaryData } from '../../types/sales-summary-data';
 import { formatPrice } from '../../utils/formatters';
-import { makeRequest } from '../../utils/requests';
+import { buildFilterParams, makeRequest } from '../../utils/requests';
 import PieChartGraphic from '../pie-chart-graphic';
 import './styles.css';
+import { FilterData } from '../../types/filter-data';
 
 const initialSummary = {
   sum: 0,
@@ -13,14 +14,25 @@ const initialSummary = {
   count: 0
 };
 
-function SalesOverview() {
+type Props = {
+  filterData?: FilterData;
+};
+
+function SalesOverview({ filterData }: Props) {
   const [salesSummryData, setSalesSummryData] = useState<SalesSummaryData>(initialSummary);
 
+  const params = useMemo(() => buildFilterParams(filterData), [filterData]);
+
   useEffect(() => {
-    makeRequest.get('/sales/summary?storeId=0').then((respose) => {
-      setSalesSummryData(respose.data);
-    });
-  }, []);
+    makeRequest
+      .get<SalesSummaryData>('/sales/summary', { params })
+      .then((respose) => {
+        setSalesSummryData(respose.data);
+      })
+      .catch(() => {
+        console.error('Error to fetch sales summary');
+      });
+  }, [params]);
 
   return (
     <div className="sales-overview-card  base-card">
